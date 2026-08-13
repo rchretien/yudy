@@ -9,8 +9,16 @@ test("la page expose le contenu et les parcours essentiels", async () => {
 
   assert.match(html, /<html lang="fr">/);
   assert.match(html, /Transformer les doutes en direction/);
-  assert.match(html, /Coaching en transition &amp; épanouissement professionnel/);
-  assert.match(html, /Je fais bouger les lignes quand tout semble figé/);
+  assert.match(html, /Coaching en transition professionnelle à Liège &amp; en ligne/);
+  assert.match(html, /clarifier votre direction, décider avec confiance/);
+  assert.match(html, /Réserver un premier échange/);
+  assert.match(html, /mobile-booking-cta/);
+  assert.match(html, /https:\/\/linktr\.ee\/ici\.yudy/);
+  assert.match(html, /id="icon-instagram"/);
+  assert.match(html, /id="icon-linkedin"/);
+  assert.match(html, /class="contact-icon"/);
+  assert.match(html, /class="hero-social hero-sequence"/);
+  assert.match(html, /class="nav-social"/);
   assert.match(html, /YUDY s'inspire de l'arabe/);
   assert.match(html, /éclairer, de faire apparaître une lueur/);
   assert.match(html, /id="chemin"/);
@@ -29,6 +37,13 @@ test("la page expose le contenu et les parcours essentiels", async () => {
   assert.match(html, /Navigation du pied de page/);
   assert.equal((html.match(/class="statement-group"/g) || []).length, 2);
   assert.match(html, /application\/ld\+json/);
+  assert.match(html, /summary_large_image/);
+  assert.match(html, /rel="canonical" href="https:\/\/rchretien\.github\.io\/yudy\/"/);
+  assert.match(html, /property="og:url" content="https:\/\/rchretien\.github\.io\/yudy\/"/);
+  assert.match(html, /property="og:image" content="https:\/\/rchretien\.github\.io\/yudy\/assets\/yudy\.png"/);
+  assert.match(html, /name="twitter:image" content="https:\/\/rchretien\.github\.io\/yudy\/assets\/yudy\.png"/);
+  assert.match(html, /"url": "https:\/\/rchretien\.github\.io\/yudy\/"/);
+  assert.match(html, /Premier échange de coaching en transition professionnelle/);
   assert.match(html, /src="assets\/yudy\.png"/);
   assert.match(html, /src="assets\/sihem\.jpeg"/);
   assert.match(html, /alt="Portrait de Sihem Dalah"/);
@@ -36,6 +51,18 @@ test("la page expose le contenu et les parcours essentiels", async () => {
   assert.doesNotMatch(html, /<div class="glow-core">\s*<span>Y<\/span>/);
   assert.doesNotMatch(html, /portrait<br>à venir/);
   assert.doesNotMatch(html, /Tu sens/);
+});
+
+test("les fichiers SEO techniques référencent l'URL publique", async () => {
+  const [robots, sitemap] = await Promise.all([
+    read("robots.txt"),
+    read("sitemap.xml"),
+  ]);
+
+  assert.match(robots, /User-agent: \*/);
+  assert.match(robots, /Allow: \//);
+  assert.match(robots, /Sitemap: https:\/\/rchretien\.github\.io\/yudy\/sitemap\.xml/);
+  assert.match(sitemap, /<loc>https:\/\/rchretien\.github\.io\/yudy\/<\/loc>/);
 });
 
 test("les styles et interactions restent accessibles", async () => {
@@ -57,6 +84,12 @@ test("les styles et interactions restent accessibles", async () => {
   assert.match(css, /--sans: "MADE Tommy"/);
   assert.match(css, /\.brand img[\s\S]*?object-fit: contain/);
   assert.match(css, /\.proof-band/);
+  assert.match(css, /\.mobile-booking-cta/);
+  assert.match(css, /\.contact-icon/);
+  assert.match(css, /\.hero-social/);
+  assert.match(css, /\.nav-social/);
+  assert.match(css, /\.journey-step\.is-visible::after/);
+  assert.match(css, /@keyframes contact-lueur/);
   assert.match(css, /\.service-details/);
   assert.match(css, /@keyframes glow-breathe/);
   assert.match(css, /\.journey-step\.is-visible::before/);

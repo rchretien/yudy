@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rchretien.github.io/yudy/sitemap.xml
