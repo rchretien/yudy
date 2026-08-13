@@ -88,6 +88,7 @@ test("les styles et interactions restent accessibles", async () => {
   assert.match(css, /\.contact-icon/);
   assert.match(css, /\.hero-social/);
   assert.match(css, /\.nav-social/);
+  assert.match(css, /\.journey-map::before/);
   assert.match(css, /\.journey-step\.is-visible::after/);
   assert.match(css, /@keyframes contact-lueur/);
   assert.match(css, /\.service-details/);
