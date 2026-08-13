@@ -29,10 +29,10 @@ test("la page expose le contenu et les parcours essentiels", async () => {
   assert.match(html, /Navigation du pied de page/);
   assert.equal((html.match(/class="statement-group"/g) || []).length, 2);
   assert.match(html, /application\/ld\+json/);
-  assert.match(html, /src="yudy\.png"/);
-  assert.match(html, /src="sihem\.jpeg"/);
+  assert.match(html, /src="assets\/yudy\.png"/);
+  assert.match(html, /src="assets\/sihem\.jpeg"/);
   assert.match(html, /alt="Portrait de Sihem Dalah"/);
-  assert.match(html, /rel="icon" href="yudy\.png"/);
+  assert.match(html, /rel="icon" href="assets\/yudy\.png"/);
   assert.doesNotMatch(html, /<div class="glow-core">\s*<span>Y<\/span>/);
   assert.doesNotMatch(html, /portrait<br>à venir/);
   assert.doesNotMatch(html, /Tu sens/);
