@@ -232,6 +232,56 @@ h3 {
   line-height: 0.95;
 }
 
+.legal-page {
+  max-width: 62rem;
+  padding-top: 11rem;
+}
+
+.legal-page h1 {
+  margin-bottom: 4rem;
+  font-size: clamp(3.4rem, 8vw, 7rem);
+  letter-spacing: -0.055em;
+}
+
+.legal-section {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.legal-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+.legal-section dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.legal-section dl div {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.35fr) 1fr;
+  gap: 1rem;
+}
+
+.legal-section dt {
+  font-weight: 600;
+}
+
+.legal-section dd {
+  margin: 0;
+}
+
+.legal-section a {
+  border-bottom: 1px solid currentcolor;
+}
+
+.legal-note {
+  margin-top: 1.5rem;
+  color: rgba(38, 48, 39, 0.75);
+}
+
 h2 {
   margin-bottom: 2rem;
   font-size: clamp(2.9rem, 5.4vw, 5.2rem);
