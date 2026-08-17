@@ -1280,6 +1280,20 @@ h1 em {
   margin-top: 1rem;
 }
 
+.first-call-list {
+  display: grid;
+  gap: 0.55rem;
+  max-width: 36rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.first-call-list li::before {
+  margin-right: 0.7rem;
+  content: "→";
+}
+
 .contact-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
