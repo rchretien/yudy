@@ -2,10 +2,13 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matc
 const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-nav");
+const mobileBookingCta = document.querySelector(".mobile-booking-cta");
+const footer = document.querySelector(".site-footer");
 const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
-const pageContent = [document.querySelector("main"), document.querySelector("footer")];
+const pageContent = [document.querySelector("main"), document.querySelector("footer")].filter(Boolean);
 
 const closeMenu = () => {
+  if (!menuButton || !navigation || !header) return;
   menuButton.setAttribute("aria-expanded", "false");
   navigation.classList.remove("is-open");
   header.classList.remove("menu-open");
@@ -13,18 +16,20 @@ const closeMenu = () => {
   pageContent.forEach((element) => element.toggleAttribute("inert", false));
 };
 
-menuButton.addEventListener("click", () => {
-  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-  menuButton.setAttribute("aria-expanded", String(!isOpen));
-  navigation.classList.toggle("is-open", !isOpen);
-  header.classList.toggle("menu-open", !isOpen);
-  document.body.style.overflow = isOpen ? "" : "hidden";
-  pageContent.forEach((element) => element.toggleAttribute("inert", !isOpen));
-});
+if (menuButton && navigation && header) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    navigation.classList.toggle("is-open", !isOpen);
+    header.classList.toggle("menu-open", !isOpen);
+    document.body.style.overflow = isOpen ? "" : "hidden";
+    pageContent.forEach((element) => element.toggleAttribute("inert", !isOpen));
+  });
+}
 
 navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+  if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") === "true") {
     closeMenu();
     menuButton.focus();
   }
@@ -63,7 +68,8 @@ sections.forEach((section) => sectionObserver.observe(section));
 
 const journey = document.querySelector("[data-journey]");
 const updateOnScroll = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
+  header?.classList.toggle("is-scrolled", window.scrollY > 24);
+  mobileBookingCta?.classList.toggle("is-footer-visible", Boolean(footer && footer.getBoundingClientRect().top < window.innerHeight));
 
   if (!journey || reducedMotion) return;
   const rect = journey.getBoundingClientRect();
@@ -105,4 +111,5 @@ if (parallax && !reducedMotion) {
   });
 }
 
-document.querySelector("[data-year]").textContent = String(new Date().getFullYear());
+const year = document.querySelector("[data-year]");
+if (year) year.textContent = String(new Date().getFullYear());
