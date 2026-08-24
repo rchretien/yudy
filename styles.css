@@ -290,7 +290,7 @@ h3 {
 .page-intro h1 {
   max-width: 72rem;
   margin-bottom: 2rem;
-  font-size: clamp(3.3rem, 6.6vw, 6.7rem);
+  font-size: clamp(3rem, 6vw, 6.1rem);
   letter-spacing: -0.06em;
 }
 
@@ -319,7 +319,7 @@ h3 {
 
 .services-preview .service-card h3 {
   margin-top: 2.5rem;
-  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-size: clamp(1.9rem, 3vw, 3rem);
 }
 
 .closing-cta {
@@ -332,7 +332,7 @@ h3 {
 
 h2 {
   margin-bottom: 2rem;
-  font-size: clamp(2.4rem, 4.4vw, 4.3rem);
+  font-size: clamp(2.25rem, 4vw, 4rem);
   letter-spacing: -0.045em;
 }
 
@@ -698,7 +698,7 @@ h1 em {
 }
 
 .brand-story-copy h2 {
-  font-size: clamp(2.8rem, 5.2vw, 5.4rem);
+  font-size: clamp(2.5rem, 4.7vw, 4.8rem);
 }
 
 .brand-story-copy > p:last-child {
@@ -722,7 +722,7 @@ h1 em {
 
 .recognition-lead {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+  font-size: clamp(1.6rem, 2.9vw, 2.9rem);
   line-height: 1.08;
 }
 
@@ -764,7 +764,7 @@ h1 em {
   padding: 0;
   border: 0;
   font-family: var(--serif);
-  font-size: clamp(1.45rem, 2.6vw, 2.7rem);
+  font-size: clamp(1.35rem, 2.3vw, 2.45rem);
   font-style: italic;
   line-height: 1.13;
   text-align: center;
@@ -859,7 +859,7 @@ h1 em {
 
 .lead-copy {
   font-family: var(--serif);
-  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
   line-height: 1.25;
 }
 
@@ -958,7 +958,7 @@ h1 em {
   display: block;
   margin-top: 4.5rem;
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-size: clamp(1.6rem, 2.7vw, 2.8rem);
   font-weight: 500;
   line-height: 1;
 }
@@ -997,7 +997,7 @@ h1 em {
 }
 
 .approach h2 {
-  font-size: clamp(3rem, 6vw, 6.2rem);
+  font-size: clamp(2.6rem, 5.4vw, 5.4rem);
 }
 
 .approach-body {
@@ -1144,7 +1144,7 @@ h1 em {
 
 .journey-step h3 {
   margin: 2rem 0 0.7rem;
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-size: clamp(1.8rem, 2.7vw, 2.85rem);
 }
 
 .journey-step p {
@@ -1174,7 +1174,7 @@ h1 em {
 }
 
 .services-heading h2 {
-  font-size: clamp(2.7rem, 4.8vw, 5rem);
+  font-size: clamp(2.4rem, 4.3vw, 4.4rem);
 }
 
 .services-heading > p:last-child {
@@ -1229,7 +1229,7 @@ h1 em {
 
 .service-card h3 {
   margin: 4rem 0 1.5rem;
-  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
 }
 
 .service-card p {
@@ -1304,7 +1304,7 @@ h1 em {
 
 .expertise-grid h3 {
   margin: 4rem 0 1rem;
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-size: clamp(1.8rem, 2.7vw, 2.85rem);
 }
 
 .expertise-grid p {
@@ -1356,7 +1356,7 @@ h1 em {
 }
 
 .contact-copy h2 {
-  font-size: clamp(2.4rem, 4.4vw, 4.3rem);
+  font-size: clamp(2.25rem, 4vw, 4rem);
 }
 
 .contact-copy > p:not(.eyebrow) {
@@ -1812,19 +1812,33 @@ h1 em {
   :root { --pad: 1.2rem; }
 
   .page-intro h1 {
-    font-size: clamp(2.65rem, 11vw, 4rem);
+    font-size: clamp(2.45rem, 10vw, 3.6rem);
   }
 
-  h2 { font-size: clamp(2.1rem, 10vw, 3.2rem); }
+  h2 { font-size: clamp(2rem, 9.5vw, 3rem); }
 
   .brand-story-copy h2,
   .approach h2,
   .services-heading h2 {
-    font-size: clamp(2.25rem, 10vw, 3.6rem);
+    font-size: clamp(2.05rem, 9.5vw, 3.3rem);
   }
 
   .service-card h3 {
-    font-size: clamp(1.9rem, 9vw, 3rem);
+    font-size: clamp(1.75rem, 8.5vw, 2.8rem);
+  }
+
+  .lead-copy {
+    font-size: 1.35rem;
+  }
+
+  .recognition-lead,
+  .outcome-list strong {
+    font-size: 1.6rem;
+  }
+
+  .journey-step h3,
+  .expertise-grid h3 {
+    font-size: 1.85rem;
   }
 
   .hero {
