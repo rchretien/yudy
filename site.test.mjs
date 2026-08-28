@@ -13,9 +13,9 @@ test("la page expose le contenu et les parcours essentiels", async () => {
   assert.match(html, /Transformer les doutes en direction/);
   assert.match(html, /Coaching en transition professionnelle à Liège &amp; en ligne/);
   assert.match(html, /nous clarifions votre situation, votre blocage principal/);
-  assert.match(html, /Réserver un premier échange/);
+  assert.match(html, /Réserver une séance - 80 € TTC/);
   assert.match(html, /mobile-booking-cta/);
-  assert.match(html, /https:\/\/linktr\.ee\/ici\.yudy/);
+  assert.match(html, /https:\/\/www\.instagram\.com\/ici\.yudy\//);
   assert.match(html, /id="icon-instagram"/);
   assert.match(html, /id="icon-linkedin"/);
   assert.match(html, /class="contact-icon"/);
@@ -30,6 +30,10 @@ test("la page expose le contenu et les parcours essentiels", async () => {
   assert.match(about, /id="chemin"/);
   assert.match(services, /id="accompagnements"/);
   assert.match(services, /Retours d'expérience/);
+  assert.match(services, /Trois formats selon votre besoin/);
+  assert.match(services, /Sur demande/);
+  assert.match(services, /Réserver une première séance individuelle/);
+  assert.match(services, /Me contacter pour un collectif ou un atelier/);
   assert.doesNotMatch(services, /Accompagnements 1:1/);
   assert.match(services, /Florence · 1:1/);
   assert.match(services, /Mina · 1:1/);
@@ -59,7 +63,7 @@ test("la page expose le contenu et les parcours essentiels", async () => {
   assert.match(html, /property="og:image" content="https:\/\/rchretien\.github\.io\/yudy\/assets\/yudy_soleil\.jpg"/);
   assert.match(html, /name="twitter:image" content="https:\/\/rchretien\.github\.io\/yudy\/assets\/yudy_soleil\.jpg"/);
   assert.match(html, /"url": "https:\/\/rchretien\.github\.io\/yudy\/"/);
-  assert.match(html, /Premier échange de coaching en transition professionnelle/);
+  assert.match(html, /Séance de coaching individuel/);
   assert.match(about, /src="assets\/yudy_soleil\.jpg"/);
   assert.match(about, /src="assets\/sihem\.jpeg"/);
   assert.match(about, /alt="Portrait de Sihem Dalah"/);
