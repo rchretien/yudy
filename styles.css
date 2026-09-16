@@ -590,14 +590,6 @@ h1 em {
   gap: 1.6rem;
 }
 
-.booking-note {
-  max-width: 31rem;
-  margin: 1rem 0 0;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: rgba(38, 48, 39, 0.78);
-}
-
 .nav-social a {
   display: inline-flex;
   align-items: center;
