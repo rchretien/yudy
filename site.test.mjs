@@ -11,8 +11,9 @@ test("la page expose le contenu et les parcours essentiels", async () => {
 
   assert.match(html, /<html lang="fr">/);
   assert.match(html, /Transformer les doutes en direction/);
-  assert.match(html, /Coaching en transition professionnelle à Liège &amp; en ligne/);
-  assert.match(html, /nous clarifions votre situation, votre blocage principal/);
+  assert.match(html, /Coaching en transition professionnelle pour femmes/);
+  assert.match(html, /Pour les femmes · À Liège &amp; en ligne/);
+  assert.match(html, /Nous nommons ce qui vous retient aujourd'hui/);
   assert.match(html, /Réserver une séance - 80 € TTC/);
   assert.match(html, /mobile-booking-cta/);
   assert.match(html, /https:\/\/www\.instagram\.com\/ici\.yudy\//);
@@ -46,7 +47,8 @@ test("la page expose le contenu et les parcours essentiels", async () => {
   assert.match(html, /id="contact"/);
   assert.match(html, /0494 24 66 72/);
   assert.match(html, /ici\.yudy@gmail\.com/);
-  assert.match(html, /changer de\s+carrière à Liège/);
+  assert.match(html, /Réserver sa place/);
+  assert.match(html, /Et si nous échangions sur <em>ce qui cherche à naître&nbsp;\?<\/em>/);
   assert.match(services, /Faire le point sur son avenir professionnel/);
   assert.match(about, /Des espaces doux de transformation/);
   assert.match(html, /@ici\.yudy/);

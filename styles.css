@@ -300,23 +300,15 @@ h3 {
   max-width: 48rem;
 }
 
-.home-teaser {
-  background: var(--white);
-}
-
 .testimonials {
   overflow: hidden;
   padding-top: clamp(3rem, 6vw, 5rem);
-  padding-bottom: clamp(1rem, 2vw, 1.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
   background: var(--white);
 }
 
 .testimonials .section-heading {
   margin-bottom: clamp(1.8rem, 4vw, 3rem);
-}
-
-.testimonials + .home-teaser {
-  padding-top: clamp(1rem, 2vw, 1.5rem);
 }
 
 .testimonial-carousel {
@@ -464,26 +456,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.teaser-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(3rem, 8vw, 9rem);
-  align-items: start;
-}
-
-.teaser-grid > div {
-  max-width: 36rem;
-}
-
-.services-preview .services-heading .button {
-  margin-top: 1.5rem;
-}
-
-.services-preview .service-card h3 {
-  margin-top: 2.5rem;
-  font-size: clamp(1.9rem, 3vw, 3rem);
-}
-
 .closing-cta {
   background: var(--paper);
 }
@@ -588,14 +560,6 @@ h1 em {
   display: flex;
   align-items: center;
   gap: 1.6rem;
-}
-
-.booking-note {
-  max-width: 31rem;
-  margin: 1rem 0 0;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: rgba(38, 48, 39, 0.78);
 }
 
 .nav-social a {
@@ -1937,7 +1901,6 @@ h1 em {
   .scroll-cue { display: none; }
 
   .recognition-grid,
-  .teaser-grid,
   .brand-story,
   .about,
   .approach,
